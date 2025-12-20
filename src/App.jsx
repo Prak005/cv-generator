@@ -7,10 +7,10 @@ import './styles/App.css';
 function App(){
     return(
         <div className="App">
-            <h1>CV Generator</h1>
-            <GeneralInfo />
-            <Education />
-            <Experience />
+            <div className="left">
+            </div>
+            <div className="right">
+            </div>
         </div>
     );
 }

@@ -25,6 +25,7 @@ function Education(){
             <input type="number" placeholder="End Year" value={edu.to} onChange={(e) => setEdu({...edu, to:e.target.value})}/>
             <input type="text" placeholder="Institute Name" value={edu.name} onChange={(e) => setEdu({...edu, name: e.target.vaue})}/>
             <input type="number" placeholder="Enter GPA" value={edu.gpa} onChange={(e) => setEdu({...edu, gpa:e.target.value})}/>
+            <button type="submit">Save</button>
         </form>
     )
 }
