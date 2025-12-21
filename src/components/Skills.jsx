@@ -17,8 +17,8 @@ function Skills(){
                 </ul>
                 <button className="edit-btn" onClick={() => setSubmitted(false)}>Edit Skills</button>
             </div>
-        )
-    };
+        );
+    }
 
     return(
         <form className="skills" onSubmit={() => setSubmitted(true)}>
@@ -28,6 +28,7 @@ function Skills(){
             <input type="text" placeholder="Skill" value={skills.three} onChange={(e) => setSkills({...skills, three:e.target.value})}/>
             <input type="text" placeholder="Skill" value={skills.four} onChange={(e) => setSkills({...skills, four:e.target.value})}/>
             <input type="text" placeholder="Skill" value={skills.five} onChange={(e) => setSkills({...skills, five:e.target.value})}/>
+            <button type="submit">Save</button>
         </form>
     );
 }
