@@ -1,33 +1,48 @@
 import React, {useState} from 'react';
-function Languages() {
+
+function Languages(){
     const [submitted, setSubmitted] = useState(false);
-    const [languages, setLanguages] = useState({one:'', two:'', three:'', four:''});
+    const [languages, setLanguages] = useState(['']);
+
+    function addLanguage(){
+        setLanguages([...languages, ''])
+    }
+    function updateLanguages(index, value){
+        const copy = [...languages];
+        copy[index] = value;
+        setLanguages(copy);
+    }
+    function removeLanguages(index){
+        setLanguages(languages.filter((_,i) => i!==index));
+    }
 
     if(submitted){
         return(
             <div className="languages">
                 <h3>Languages</h3>
                 <ul>
-                    <li>{languages.one}</li>
-                    <li>{languages.two}</li>
-                    <li>{languages.three}</li>
-                    <li>{languages.four}</li>
+                    {languages.filter(l => l.trim() !== '').map((lang,i) => (
+                        <li  key={i}>{lang}</li>
+                    ))}
                 </ul>
-                <button className="edit-btn" onClick={() => setSubmitted(false)}>Edit Languages</button>
+                <button onClick={() => setSubmitted(false)}>Edit Languages</button>
             </div>
         );
     }
 
     return(
-        <form className="languages" onSubmit={() => setSubmitted(true)}>
+        <form className="languages" onSubmit={(e) => {e.preventDefault(); setSubmitted(true)}}>
             <h3>Languages</h3>
-            <input type="text" placeholder="Language" value={languages.one} onChange={(e) => setLanguages({...languages, one:e.target.value})}/>
-            <input type="text" placeholder="Language" value={languages.two} onChange={(e) => setLanguages({...languages, two:e.target.value})}/>
-            <input type="text" placeholder="Language" value={languages.three} onChange={(e) => setLanguages({...languages, three:e.target.value})}/>
-            <input type="text" placeholder="Language" value={languages.four} onChange={(e) => setLanguages({...languages, four:e.target.value})}/>
+            {languages.map((lang,i) => (
+                <div key={i}>
+                    <input type="text" placeholder="language" value={lang} onChange={(e) => updateLanguages(i, e.target.value)}/>
+                    <button type="button" onClick={() => removeLanguages(i)}>Remove</button>
+                </div>
+            ))}
+            <button type="button" onClick={addLanguage}>Add Language</button>
             <button type="submit">Save</button>
         </form>
-    )
+    );
 }
 
 export default Languages;
