@@ -1,16 +1,32 @@
-import React from 'react';
-import GeneralInfo from './components/GeneralInfo';
-import Education from './components/Education';
-import Experience from './components/Experience';
+import UserImg from './components/left/UserImg';
+import Contact from './components/left/Contact';
+import Education from './components/left/Education';
+import Skills from './components/left/Skills';
+import Languages from './components/left/Languages';
+
+import Profile from './components/right/Profile';
+import WorkExperience from './components/right/WorkExperience';
+import References from './components/right/Reference';
+
+import './styles/left.css';
+import './styles/right.css';
 import './styles/App.css';
 
-function App(){
+function App() {
     return(
-        <div className="App">
-            <div className="left">
-            </div>
-            <div className="right">
-            </div>
+        <div className="resume">
+            <aside className="resume-left">
+                <UserImg />
+                <Contact />
+                <Education />
+                <Skills />
+                <Languages />
+            </aside>
+            <main className="resume-right">
+                <Profile />
+                <WorkExperience />
+                <References />
+            </main>
         </div>
     );
 }
