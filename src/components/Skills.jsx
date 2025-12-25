@@ -2,32 +2,48 @@ import React, {useState} from 'react';
 
 function Skills(){
     const [submitted, setSubmitted] = useState(false);
-    const [skills, setSkills] = useState({one:'', two:'', three:'', four:'', five:''});
+    const [skills, setSkills] = useState(['']);
+
+    function addSkill(){
+        setSkills([...skills, '']);
+    }
+
+    function updateSkill(index, value){
+        const copy = [...skills];
+        copy[index] = value;
+        setSkills(copy);
+    }
+
+    function removeSkill(index){
+        setSkills(skills.filter((_,i) => i !== index));
+    }
 
     if(submitted){
         return(
             <div className="skills">
                 <h3>Skills</h3>
                 <ul>
-                    <li>{skills.one}</li>
-                    <li>{skills.two}</li>
-                    <li>{skills.three}</li>
-                    <li>{skills.four}</li>
-                    <li>{skills.five}</li>
+                    {skills
+                        .filter(s => s.trim() !== '')
+                        .map((skill, i) => (
+                            <li key={i}>{skill}</li>
+                        ))}
                 </ul>
-                <button className="edit-btn" onClick={() => setSubmitted(false)}>Edit Skills</button>
+                <button onClick={() => setSubmitted(false)}>Edit Skills</button>
             </div>
         );
     }
 
     return(
-        <form className="skills" onSubmit={() => setSubmitted(true)}>
+        <form className="skills" onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}}>
             <h3>Skills</h3>
-            <input type="text" placeholder="Skill" value={skills.one} onChange={(e) => setSkills({...skills, one:e.target.value})}/>
-            <input type="text" placeholder="Skill" value={skills.two} onChange={(e) => setSkills({...skills, two:e.target.value})}/>
-            <input type="text" placeholder="Skill" value={skills.three} onChange={(e) => setSkills({...skills, three:e.target.value})}/>
-            <input type="text" placeholder="Skill" value={skills.four} onChange={(e) => setSkills({...skills, four:e.target.value})}/>
-            <input type="text" placeholder="Skill" value={skills.five} onChange={(e) => setSkills({...skills, five:e.target.value})}/>
+            {skills.map((skill,i) => (
+                <div key={i}>
+                    <input type="text" placeholder="Skill" value={skill} onChange={(e) => updateSkill(i, e.target.value)}/>
+                    <button type="button" onClick={() => removeSkill(i)}>Remove</button>
+                </div>
+            ))}
+            <button type="button" onClick={addSkill}>Add Skill</button>
             <button type="submit">Save</button>
         </form>
     );
