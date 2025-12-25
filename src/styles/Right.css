@@ -1,0 +1,63 @@
+.resume-right {
+    background-color: white;
+    color: #1f3a5f;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+h3{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #1f3a5f;
+}
+
+.profile p{
+    font-size: 0.9rem;
+    color: #4E5658;
+}
+
+.work-experience > div{
+    margin-bottom: 2rem;
+}
+.work-experience > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.work-experience strong{
+    font-size: 1rem;
+    color: black;
+}
+.work-experience p{
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #555555;
+}
+.work-experience ul{
+    margin-left: 1.2rem;
+}
+.work-experience li{
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+.references > div {
+    margin-bottom: 1.2rem;
+}
+.references strong {
+    font-size: 0.95rem;
+    color: black;
+}
+.references p{
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 0.2rem;
+}
