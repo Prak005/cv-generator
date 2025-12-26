@@ -8,8 +8,8 @@ import Profile from './components/right/Profile';
 import WorkExperience from './components/right/WorkExperience';
 import References from './components/right/Reference';
 
-import './styles/left.css';
-import './styles/right.css';
+import './styles/Left.css';
+import './styles/Right.css';
 import './styles/App.css';
 
 function App() {
