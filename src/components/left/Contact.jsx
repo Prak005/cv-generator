@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import phoneIcon from '../../assets/phone.svg';
+import mailIcon from '../../assets/mail.svg'; 
+import githubIcon from '../../assets/github.svg';
+import linkedinIcon from '../../assets/linkedin.svg';
 
 function Contact () {
     const [submitted, setSubmitted] = useState(false);
@@ -8,13 +12,13 @@ function Contact () {
         return(
             <div className="contact">
                 <h3>Contact</h3>
-                <p><img alt="phone" src="./assets/phone.svg"/> {info.phone}</p>
-                <p><img alt="email" src="./assets/mail.svg"/> {info.email}</p>
-                <p><img alt="github" src="./assets/github.svg"/>
-                    <a href={info.github} target="_blank" rel="noreferrer"> {info.github}</a>
+                <p><img alt="phone" src={phoneIcon}/> {info.phone}</p>
+                <p><img alt="email" src={mailIcon}/> {info.email}</p>
+                <p><img alt="github" src={githubIcon}/>
+                    <a href={info.github} target="_blank" rel="noreferrer"> {info.github.replace(/^https?:\/\//,'')}</a>
                 </p>
-                <p><img alt="linkedin" src="./assets/linkedin.svg"/>
-                    <a href={info.linkedin} target="_blank" rel="noreferrer"> {info.linkedin}</a>
+                <p><img alt="linkedin" src={linkedinIcon}/>
+                    <a href={info.linkedin} target="_blank" rel="noreferrer"> {info.linkedin.replace(/^https?:\/\//,'')}</a>
                 </p>
                 <button className="edit-btn" onClick={() => setSubmitted(false)}>Edit Contact</button>
             </div>
