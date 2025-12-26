@@ -4,6 +4,7 @@ import Education from './components/left/Education';
 import Skills from './components/left/Skills';
 import Languages from './components/left/Languages';
 
+import Header from './components/right/Header';
 import Profile from './components/right/Profile';
 import WorkExperience from './components/right/WorkExperience';
 import References from './components/right/Reference';
@@ -23,6 +24,7 @@ function App() {
                 <Languages />
             </aside>
             <main className="resume-right">
+                <Header />
                 <Profile />
                 <WorkExperience />
                 <References />

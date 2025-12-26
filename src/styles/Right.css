@@ -31,6 +31,9 @@ h3{
     font-size: 0.9rem;
     color: #4E5658;
 }
+.profile textarea{
+    width:100%;
+}
 
 .work-experience > div{
     margin-bottom: 2rem;
