@@ -13,7 +13,7 @@ function UserImg() {
 
     return (
         <div className="user-img">
-            <img src={image} alt="user" onClick={() => fileInputRef.current.click()} style={{cursor: 'pointer'}} />
+            <img src={image} onClick={() => fileInputRef.current.click()} style={{cursor: 'pointer'}} />
             <input type="file" accept="image/*" ref={fileInputRef} onChange={handleImageSelect} hidden />
         </div>
     );
