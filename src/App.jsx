@@ -7,6 +7,8 @@ import Languages from './components/left/Languages';
 import Header from './components/right/Header';
 import Profile from './components/right/Profile';
 import WorkExperience from './components/right/WorkExperience';
+import Projects from './components/right/Projects';
+import Certificates from './components/right/Certificates';
 import References from './components/right/Reference';
 
 import './styles/Left.css';
@@ -27,6 +29,8 @@ function App() {
                 <Header />
                 <Profile />
                 <WorkExperience />
+                <Projects />
+                <Certificates />
                 <References />
             </main>
         </div>
