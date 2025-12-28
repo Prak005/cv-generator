@@ -32,14 +32,9 @@ function Education(){
                 <h3>Education</h3>
                 {education.map((edu,i) => (
                     <div key={i}>
-                        <p>
-                            {edu.from && <strong>{edu.from} - </strong>}<strong>{edu.to}</strong>
-                        </p>
-                        <p><strong>{edu.institute}</strong></p>
                         <ul>
-                            {edu.course && <li>{edu.course}</li>}
-                            {edu.cgpa && <li>{edu.cgpa}</li>}
-                        </ul>
+                            <li>{edu.from && `${edu.from} - `}{edu.to}<p>{edu.institute}</p><p>{edu.course} • {edu.cgpa}</p></li>
+                        </ul>            
                     </div>
                 ))}
                 <button onClick={() => setSubmitted(false)}>Edit Education</button>

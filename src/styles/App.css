@@ -46,9 +46,6 @@ body {
     input, textarea{
         display:none;
     }
-    body{
-        background:white;
-    }
     .resume{
         box-shadow:none;
         margin:0;
