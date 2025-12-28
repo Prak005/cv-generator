@@ -33,12 +33,12 @@ function Education(){
                 {education.map((edu,i) => (
                     <div key={i}>
                         <p>
-                            <strong>{edu.from} - {edu.to}</strong>
+                            {edu.from && <strong>{edu.from} - </strong>}<strong>{edu.to}</strong>
                         </p>
                         <p><strong>{edu.institute}</strong></p>
                         <ul>
-                            <li>{edu.course}</li>
-                            <li>{edu.cgpa && `${edu.cgpa} / 10.0`}</li>
+                            {edu.course && <li>{edu.course}</li>}
+                            {edu.cgpa && <li>{edu.cgpa}</li>}
                         </ul>
                     </div>
                 ))}
