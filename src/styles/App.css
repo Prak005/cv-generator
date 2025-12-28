@@ -7,7 +7,7 @@
 body {
     background-color: #eaeaea;
     font-family: system-ui, Helvetica, Arial, sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .resume{
