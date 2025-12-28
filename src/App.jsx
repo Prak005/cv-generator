@@ -33,6 +33,9 @@ function App() {
                 <Work />
                 <Ref />
             </main>
+            <div>
+                <button onClick={() => window.print()}>Download CV</button>
+            </div>
         </div>
     );
 }
