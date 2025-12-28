@@ -6,10 +6,10 @@ import Languages from './components/left/Languages';
 
 import Header from './components/right/Header';
 import Profile from './components/right/Profile';
-import WorkExperience from './components/right/WorkExperience';
+import Work from './components/right/Work';
 import Projects from './components/right/Projects';
 import Certificates from './components/right/Certificates';
-import References from './components/right/Reference';
+import Ref from './components/right/Ref';
 
 import './styles/Left.css';
 import './styles/Right.css';
@@ -28,10 +28,10 @@ function App() {
             <main className="resume-right">
                 <Header />
                 <Profile />
-                <WorkExperience />
                 <Projects />
                 <Certificates />
-                <References />
+                <Work />
+                <Ref />
             </main>
         </div>
     );
