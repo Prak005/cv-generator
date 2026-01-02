@@ -40,11 +40,11 @@ function App() {
             </main>
 
             <div className="controls">
-                <button onClick={() => setViewMode(v => !v)}>
-                    {viewMode ? 'Edit Mode' : 'View Mode'}
+                <button className={`view-toggle ${viewMode ? 'edit' : 'view'}`} onClick={() => setViewMode(v => !v)}>
+                    Preview
                 </button>
 
-                <button onClick={() => window.print()}>
+                <button className="print-btn" onClick={() => window.print()}>
                     Print CV
                 </button>
             </div>

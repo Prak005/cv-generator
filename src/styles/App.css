@@ -26,3 +26,30 @@ body {
     max-width: 68%;
 }
 
+.controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.view-toggle, .print-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.view-toggle:active {
+    transform: scale(0.97);
+}
+
+.view-toggle.edit {
+    background-color: #2563eb;
+    color: #ffffff;
+}
