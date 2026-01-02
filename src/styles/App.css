@@ -26,29 +26,3 @@ body {
     max-width: 68%;
 }
 
-/* .edit-btn{
-    margin-top: 0.6rem;
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.3rem 0.7rem;
-    cursor: pointer;
-}
-.edit-btn:hover{
-    background-color: lightgray;
-} */
-
-@media print{
-    button{
-        display: none;
-    }
-    input, textarea{
-        display:none;
-    }
-    .resume{
-        box-shadow:none;
-        margin:0;
-        max-width:100%;
-    }
-}

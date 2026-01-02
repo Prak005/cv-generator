@@ -1,20 +1,36 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import References from './Reference';
 
-function Ref(){
+function Ref({ viewMode }) {
     const [showRef, setShowRef] = useState(false);
-    if(showRef){
-        return(
+
+    if (showRef) {
+        return (
             <div className="ref">
-                <References />
-                <button type="button" onClick={() => setShowRef(false)}>Remove References</button>
+                <References viewMode={viewMode} />
+
+                {!viewMode && (
+                    <button
+                        type="button"
+                        onClick={() => setShowRef(false)}
+                    >
+                        Remove References
+                    </button>
+                )}
             </div>
         );
     }
 
-    return(
+    return (
         <div className="ref">
-            <button type="button" onClick={() => setShowRef(true)}>Add References</button>
+            {!viewMode && (
+                <button
+                    type="button"
+                    onClick={() => setShowRef(true)}
+                >
+                    Add References
+                </button>
+            )}
         </div>
     );
 }

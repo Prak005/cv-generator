@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import UserImg from './components/left/UserImg';
 import Contact from './components/left/Contact';
 import Education from './components/left/Education';
@@ -16,25 +18,35 @@ import './styles/Right.css';
 import './styles/App.css';
 
 function App() {
-    return(
+    const [viewMode, setViewMode] = useState(false);
+
+    return (
         <div className="resume">
             <aside className="resume-left">
-                <UserImg />
-                <Contact />
-                <Education />
-                <Skills />
-                <Languages />
+                <UserImg viewMode={viewMode} />
+                <Contact viewMode={viewMode} />
+                <Education viewMode={viewMode} />
+                <Skills viewMode={viewMode} />
+                <Languages viewMode={viewMode} />
             </aside>
+
             <main className="resume-right">
-                <Header />
-                <Profile />
-                <Projects />
-                <Certificates />
-                <Work />
-                <Ref />
+                <Header viewMode={viewMode} />
+                <Profile viewMode={viewMode} />
+                <Projects viewMode={viewMode} />
+                <Certificates viewMode={viewMode} />
+                <Work viewMode={viewMode} />
+                <Ref viewMode={viewMode} />
             </main>
-            <div>
-                <button onClick={() => window.print()}>Print CV</button>
+
+            <div className="controls">
+                <button onClick={() => setViewMode(v => !v)}>
+                    {viewMode ? 'Edit Mode' : 'View Mode'}
+                </button>
+
+                <button onClick={() => window.print()}>
+                    Print CV
+                </button>
             </div>
         </div>
     );
