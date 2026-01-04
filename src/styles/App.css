@@ -12,7 +12,7 @@ body {
 
 .resume{
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: auto;
     display: flex;
     min-height: 94vh;
     background-color: white;
