@@ -14,7 +14,7 @@ body {
     max-width: 1000px;
     margin: auto;
     display: flex;
-    min-height: 94vh;
+    min-height: 100vh;
     background-color: white;
     box-shadow: 0 4px 20px lightgray;
 }
