@@ -54,3 +54,16 @@ body {
     background-color: #2563eb;
     color: #ffffff;
 }
+
+
+@media print {
+  .controls,
+  .view-toggle,
+  .print-btn {
+    display: none;
+  }
+}
+@page {
+  size: A4;
+  margin: 0;
+}
