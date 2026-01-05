@@ -7,23 +7,24 @@
 body {
     background-color: #eaeaea;
     font-family: system-ui, Helvetica, Arial, sans-serif;
-    /* overflow: hidden; */
 }
 
 .resume{
     max-width: 1000px;
     margin: auto;
+    padding: 0;
     display: flex;
-    min-height: 100vh;
+    min-height: 297mm;
+    width: 210mm;
     background-color: white;
     box-shadow: 0 4px 20px lightgray;
 }
 
 .resume-left{
-    max-width: 32%;
+    max-width: 30%;
 }
 .resume-right{
-    max-width: 68%;
+    max-width: 70%;
 }
 
 .controls {

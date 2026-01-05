@@ -48,7 +48,7 @@ function Projects({ viewMode }) {
                             </a>
                         )}
 
-                        <span className="live">Preview: </span>{p.live && (
+                        <span>Live: </span>{p.live && (
                             <a
                                 href={p.live}
                                 target="_blank"
