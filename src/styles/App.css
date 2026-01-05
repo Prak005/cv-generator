@@ -21,10 +21,10 @@ body {
 }
 
 .resume-left{
-    max-width: 30%;
+    width: 30%;
 }
 .resume-right{
-    max-width: 70%;
+    width: 70%;
 }
 
 .controls {
